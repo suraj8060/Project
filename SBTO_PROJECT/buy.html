@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ORDER </title>
+    <a href="href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet"></a>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="hedder">
+        <div class="navbar">
+
+
+
+
+            <img src="logo.png">
+
+
+
+
+
+
+            <div class="contry_select" id="contry">
+                <div class="select">
+                    <p id="text"> Select Your Contry </p>
+                    <i class="fa-solid fa-chevron-down" id="moving"></i>
+                </div>
+
+
+                <ul class="option_box" id="list">
+                    <li class="option" onclick="myfunction('USA')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>USA</p>
+                    </li>
+                    <li class="option" onclick="myfunction('Canada')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Canada</p>
+                    </li>
+                    <li class="option" onclick="myfunction('India')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>India</p>
+                    </li>
+                    <li class="option" onclick="myfunction('Pakistan')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Pakistan</p>
+                    </li>
+                    <li class="option" onclick="myfunction('New York')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>New York</p>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+            <div class="search_box">
+                <input type="text" class="searchclass" id="searchid" placeholder="Find Cars, mobile phone and More....">
+                <p> <i class="fa-solid fa-magnifying-glass"></i> </p>
+            </div>
+
+
+
+
+            <div class="language">
+                <p id="eng_tag"> English </p>
+
+                <ul class="hin_eng">
+                    <li onclick="languageolx('English')"> English </li>
+                    <li onclick="languageolx('हिन्दी')">हिन्दी</li>
+                </ul>
+
+            </div>
+
+
+
+
+            <div class="messeage">
+                <i class="fa-regular fa-comment"></i>
+            </div>
+
+
+
+
+            <div class="messeage">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
+
+
+
+
+            <div class="your_logo">
+                <div class="girl_img" id="girl_img_id">
+                    <img src="pic3.jpg">
+                </div>
+
+                <div class="dropdwon" id="gropdwonid">
+                    <div class="nameandimg">
+                        <img src="pic3.jpg">
+                        <p> Puja Varma </p>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-user"></i>
+                            <p>My Account</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-box"></i>
+                            <p>My Orders</p>
+                        </li>
+                        <hr>
+                        <li>
+                            <i class="fa-regular fa-circle-question"></i>
+                            <p>Help</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-gear"></i>
+                            <p>Setting</p>
+                        </li>
+                        <hr>
+
+                        <li>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p>Log Out</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="selling_page">
+                <button> <i class="fa-solid fa-plus"></i>
+                    <p>SELL</p>
+                </button>
+            </div>
+            
+
+
+        </div>
+    </div>
+            
+    <div class="ads_img2">
+        <img src="check-mark.png">
+    </div>
+
+    <div class="mko">
+        <p><b>ORDER IS SUCCESSFULLY PLACED</b></p>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        //  =============================== * navbar * ============================================
+
+        let contry = document.getElementById('contry');
+        let moving = document.getElementById('moving');
+        let text = document.getElementById('text');
+        let list = document.getElementById('list');
+
+
+        contry.addEventListener('click', () => {
+            list.classList.toggle('hidden');
+            moving.classList.toggle('roted')
+        });
+        function myfunction(omkar) {
+            text.innerHTML = omkar;
+        }
+
+
+        let eng_tag = document.getElementById('eng_tag');
+        let hin_eng = document.querySelector('.hin_eng');
+        let language = document.querySelector('.language');
+
+
+        language.addEventListener('click', () => {
+            hin_eng.classList.toggle('display_div');
+        });
+        function languageolx(anyone) {
+            eng_tag.innerHTML = anyone;
+        }
+
+        let girl_img_id = document.getElementById('girl_img_id');
+        let gropdwonid = document.getElementById('gropdwonid');
+
+        girl_img_id.addEventListener('click', () => {
+            gropdwonid.classList.toggle('block_div')
+        });
+    </script>
+
+
+        </div>
+    </div>
